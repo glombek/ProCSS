@@ -1,0 +1,2 @@
+encoding: utf-8
+exclude: ["node_modules", ".bowerrc", ".gitignore", "bower.json", "gulpfile.js", "LICENSE", "CNAME", "package.json", "*.scss"]

@@ -1,0 +1,12 @@
+{
+	"name": "ProCSS",
+	"version": "0.0.1",
+	"devDependencies": {
+		"bower": "~1.6.7",
+		"gulp":"~3.9.0",
+		"gulp-sass": "~2.1.0",
+		"gulp-watch": "~4.3.5",
+		"gulp-jekyll": "*",
+		"browser-sync": "~2.10.0"
+	}
+}
