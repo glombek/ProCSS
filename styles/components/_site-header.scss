@@ -1,0 +1,9 @@
+.site-header {
+	background-color: $color-primary-wash;
+	color:$color-primary;
+	>._logo {
+		line-height: 5rem;
+		font-size: 3rem;
+		text-align: center;
+	}
+}

@@ -1,0 +1,13 @@
+.button {
+	text-decoration: none;
+	color: inherit;
+	border: 1px solid currentColor;
+	padding: 5px;
+	display: inline-block;
+	border-radius: 0.2em;
+	background-color: lighten($color-primary, 50);
+	
+	&:hover {
+		background-color: lighten($color-primary, 60);
+	}
+}

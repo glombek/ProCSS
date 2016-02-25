@@ -3,26 +3,35 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     sass = require('gulp-sass');
  
-gulp.task('jekyll-build', ["scss"], function (done) {
-    browserSync.notify('Building Jekyll...');
-    var stream = gulp.src(['_includes/*.html', '_layouts/*.html', '*.md', '_posts/*'])
-        .pipe(jekyll({
-            source: './'//,
-            //destination: './deploy/',
-            //bundleExec: true
-        }));
-        //.pipe(gulp.dest('./deploy/'));
-        
-        stream.on('end', function() {
-            done();
-        });
-});
+// gulp.task('jekyll-build', ["scss"], function (done) {
+//     browserSync.notify('Building Jekyll...');
+//     var stream = gulp.src(['_includes/*.html', '_layouts/*.html', '*.md', '_posts/*'])
+//         .pipe(jekyll({
+//             source: './'//,
+//             //destination: './deploy/',
+//             //bundleExec: true
+//         }));
+//         //.pipe(gulp.dest('./deploy/'));
+//         
+//         stream.on('end', function() {
+//             done();
+//         });
+// });
+// 
+// gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+//     browserSync.reload();
+// });
 
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+gulp.task('reload-browser', [], function () {
+    browserSync.notify('Reloading...');
     browserSync.reload();
+    browserSync.notify('Reloaded.');
 });
 
-gulp.task('browser-sync', ['jekyll-build'], function() {
+gulp.task('browser-sync',
+[
+    //'jekyll-build'
+    ], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -45,7 +54,8 @@ gulp.task('watch', function() {
   // Watch .js files
   //gulp.watch('src/js/**/*.js', ['js']);
   // Watch .html files and posts
-  gulp.watch(['_includes/*.html', '_layouts/*.html', '*.md', '_posts/*'], ['jekyll-rebuild']);
+  //gulp.watch(['_includes/*.html', '_layouts/*.html', '*.md', '_posts/*'], ['jekyll-rebuild']);
+  gulp.watch(['_site/**/*.html'], ['reload-browser']);
 });
 
 gulp.task('default',

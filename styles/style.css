@@ -1,2 +1,21 @@
-body:before {
-  content: "I do realise it\'s a little ironic that this CSS methodology has no styling..."; }
+html {
+  font-family: "Segoe UI", sans-serif; }
+
+.site-header {
+  background-color: #b0bbe8;
+  color: #223377; }
+  .site-header > ._logo {
+    line-height: 5rem;
+    font-size: 3rem;
+    text-align: center; }
+
+.button {
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid currentColor;
+  padding: 5px;
+  display: inline-block;
+  border-radius: 0.2em;
+  background-color: #b0bbe8; }
+  .button:hover {
+    background-color: #d7ddf4; }

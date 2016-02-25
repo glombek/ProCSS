@@ -1,12 +1,13 @@
 {
 	"name": "ProCSS",
 	"version": "0.0.1",
+	"license": "MIT",
 	"devDependencies": {
-		"bower": "~1.6.7",
-		"gulp":"~3.9.0",
-		"gulp-sass": "~2.1.0",
+		"bower": "~1.7.7",
+		"gulp":"~3.9.1",
+		"gulp-sass": "~2.2.0",
 		"gulp-watch": "~4.3.5",
 		"gulp-jekyll": "*",
-		"browser-sync": "~2.10.0"
+		"browser-sync": "~2.11.1"
 	}
 }

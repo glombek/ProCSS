@@ -1,5 +1,37 @@
-body {
-	&:before {
-		content: "I do realise it\'s a little ironic that this CSS methodology has no styling...";
-	} 
-}  
+// This is an ITCSS structure.
+// ===========================
+//
+// Don't add anything to this file directly.
+//
+//Import any frameworks first (Compass or Bourbon).
+@import '../lib/ext/bourbon/app/assets/stylesheets/bourbon';
+//@import 'compass';
+@import 'settings/settings';
+@import 'tools/tools';
+@import 'generic/generic';
+@import 'base/base';
+@import 'objects/objects';
+@import 'components/components';
+//// Optionally include the theme layer
+//@import 'theme/theme';
+@import 'trumps/trumps';
+
+//  ____________________________________
+//  \             SETTINGS             /
+//   \--------------------------------/
+//    \            TOOLS             /
+//     \----------------------------/
+//      \         GENERIC          /
+//       \------------------------/
+//        \         BASE         /
+//         \--------------------/
+//          \     OBJECTS      /
+//           \----------------/
+//            \  COMPONENTS  /
+//             \------------/
+//              \ (THEME?) /
+//               \--------/
+//                \TRUMPS/
+//                 \    /
+//                  \  /
+//                   \/

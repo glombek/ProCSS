@@ -1,15 +1,25 @@
 <html>
 	<head>
-		<title>{{ page.title }}</title>
+		<title>{{ page.title }} ~ PROCSS</title>
 		
 		<link rel="stylesheet" href="styles/style.css">
 	</head>
 	<body>
 		<header class="site-header">
-			<h1 class="_logo">ProCSS</h1>
+			<h1 class="_logo">{PROCSS}</h1>
 		</header>
-		<main>
+		<main class="content">
 			{{ content }}
+			
+			{% if page.prev %}
+			<a class="button" href="{{ page.prev }}.html">&lt; Previous</a>
+			{% endif %}
+			{% if page.next %}
+			<a class="button" href="{{ page.next }}.html">Next &gt;</a>
+			{% endif %}
 		</main>
+		<footer class="site-footer">
+			<p class="_copyright">&copy; Joe Glombek 2015</p>
+		</footer>
 	</body>
 </html>
